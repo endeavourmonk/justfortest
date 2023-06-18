@@ -19,16 +19,27 @@
 import Head from 'next/head';
 
 const LinkPreviewCard = () => {
-  return (
-    <div>
-      <Head>
-        <title>rds</title>
-        <meta property="og:title" content="My page title" />
-        <meta property="og:description" content="Description of the page" />
-      </Head>
-    </div>
-  );
+    return (
+        <div>
+            <Head>
+                <title>My Page Title</title>
+                <meta property="og:title" content="My Page Title" />
+                <meta
+                    property="og:description"
+                    content="Description of the page"
+                />
+                <meta
+                    property="og:image"
+                    content="https://realdevsquad.com/img/Real-Dev-Squad@1x.png"
+                />
+                <meta
+                    property="og:url"
+                    content="https://justfortest.vercel.app/"
+                />
+                <meta property="og:type" content="website" />
+            </Head>
+        </div>
+    );
 };
 
 export default LinkPreviewCard;
-
