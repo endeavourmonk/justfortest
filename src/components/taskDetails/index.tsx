@@ -23,6 +23,7 @@ import {
     useUpdateTaskDetailsMutation,
 } from '@/app/services/taskDetailsApi';
 import { taskDetailsDataType } from '@/interfaces/taskDetails.type';
+import LinkPreviewCard from '@/components/PreviewCard/LinkPreviewCard';
 
 type ButtonProps = {
     buttonName: string;
@@ -166,6 +167,7 @@ const TaskDetails: FC<Props> = ({ taskID }) => {
     const shouldRenderParentContainer = () => !isLoading && !isError && data;
     return (
         <>
+            <LinkPreviewCard />
             <NavBar />
             {renderLoadingComponent()}
             {shouldRenderParentContainer() && (

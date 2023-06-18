@@ -3,12 +3,12 @@ import Head from '@/components/head';
 import Layout from '@/components/Layout';
 import classNames from '@/styles/tasks.module.scss';
 import { TasksContent } from '@/components/tasks/TasksContent';
-import LinkPreviewCard from '@/components/PreviewCard/LinkPreviewCard';
+// import LinkPreviewCard from '@/components/PreviewCard/LinkPreviewCard';
 
 const Index: FC = () => {
     return (
         <Layout>
-            <LinkPreviewCard />
+            {/* <LinkPreviewCard /> */}
             <Head title="Tasks" />
 
             <div className={classNames.container}>
