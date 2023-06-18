@@ -25,8 +25,8 @@ const LinkPreviewCard = () => {
                 <title>My Page Title</title>
                 <meta property="og:title" content="My Page Title" />
                 <meta
-                    property="og:description"
-                    content="Description of the page"
+                    property="description"
+                    content="This is description for the status site of real dev squad"
                 />
                 <meta
                     property="og:image"
