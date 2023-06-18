@@ -7,7 +7,7 @@ const LinkPreviewCard = () => {
                 <title>status site</title>
                 <meta property="og:title" content="task title goes here" />
                 <meta
-                    property="description"
+                    property="og:description"
                     content="This is description for the status site of real dev squad"
                 />
                 <meta
