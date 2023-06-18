@@ -167,7 +167,7 @@ const TaskDetails: FC<Props> = ({ taskID }) => {
     const shouldRenderParentContainer = () => !isLoading && !isError && data;
     return (
         <>
-            {/* <LinkPreviewCard /> */}
+            <LinkPreviewCard />
             <NavBar />
             {renderLoadingComponent()}
             {shouldRenderParentContainer() && (
