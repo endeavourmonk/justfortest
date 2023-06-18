@@ -1,29 +1,11 @@
-// import Head from 'next/head';
-
-// const LinkPreviewCard = () => {
-//     return (
-//         <div>
-//             <Head>
-//                 <title>My page title</title>
-//                 <meta property="og:title" content="My page title" />
-//             </Head>
-//             <Head>
-//                 <meta property="og:title" content="My new title" />
-//             </Head>
-//         </div>
-//     );
-// };
-
-// export default LinkPreviewCard;
-
 import Head from 'next/head';
 
 const LinkPreviewCard = () => {
     return (
         <div>
             <Head>
-                <title>My Page Title</title>
-                <meta property="og:title" content="My Page Title" />
+                <title>status site</title>
+                <meta property="og:title" content="task title goes here" />
                 <meta
                     property="description"
                     content="This is description for the status site of real dev squad"
