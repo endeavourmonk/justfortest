@@ -1,39 +1,17 @@
 import Head from 'next/head';
 
-// const LinkPreviewCard = () => {
-//     return (
-//         <div>
-//             <Head>
-//                 <title>status site</title>
-//                 <meta property="og:title" content="task title goes here" />
-//                 <meta
-//                     property="og:description"
-//                     content="the description for the task will be shown here one or two liner"
-//                 />
-//                 <meta
-//                     property="og:image"
-//                     content="https://realdevsquad.com/img/Real-Dev-Squad@1x.png"
-//                 />
-//                 <meta
-//                     property="og:url"
-//                     content="https://justfortest.vercel.app/"
-//                 />
-//                 <meta property="og:type" content="website" />
-//                 <meta
-//                     property="og:article:published_time"
-//                     content="{taskStartDate}"
-//                 />
-//                 <meta
-//                     property="og:article:expiration_time"
-//                     content="{taskEndDate}"
-//                 />
-//             </Head>
-//         </div>
-//     );
-// };
+// async function fetchData() {
+//     const response = await fetch('https://api.realdevsquad.com/tasks');
+//     return await response.json();
+// }
 
 const LinkPreviewCard = () => {
-    const taskTitle = 'Task Title';
+    // const data = fetchData();
+    // const taskTitle = data.title;
+
+    // fetchData.then((data) => {taskTitle = data.title;});
+
+    const taskTitle = 'title of the task';
     const taskStartDate = 'June 20, 2023';
     const taskEndDate = 'June 25, 2023';
     const taskDescription =
@@ -51,7 +29,7 @@ const LinkPreviewCard = () => {
                 <meta property="og:title" content={taskTitle} />
                 <meta
                     property="og:description"
-                    content={`${taskDescription}, startedOn: ${taskStartDate} - endsOn: ${taskEndDate}, assignee: ${assignee} - reporter: ${reporter}`}
+                    content={`${taskDescription},\n startedOn: ${taskStartDate} - endsOn: ${taskEndDate}, assignee: ${assignee} - reporter: ${reporter}`}
                 />
                 <meta property="og:image" content={taskImage} />
                 <meta property="og:url" content={taskURL} />
