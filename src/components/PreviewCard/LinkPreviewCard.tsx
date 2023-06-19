@@ -19,6 +19,14 @@ const LinkPreviewCard = () => {
                     content="https://justfortest.vercel.app/"
                 />
                 <meta property="og:type" content="website" />
+                <meta
+                    property="og:article:published_time"
+                    content="{taskStartDate}"
+                />
+                <meta
+                    property="og:article:expiration_time"
+                    content="{taskEndDate}"
+                />
             </Head>
         </div>
     );
