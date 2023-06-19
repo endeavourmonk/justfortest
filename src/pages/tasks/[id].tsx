@@ -12,12 +12,12 @@ const TaskDetailsPage = () => {
         return <PageNotFound />;
     }
 
-    // return <TaskDetails url={TASK_DETAILS_URL} taskID={id} />;
-    return (
-        <div>
-            {/* <LinkPreviewCard /> */}
-            <TaskDetails url={TASK_DETAILS_URL} taskID={id} />
-        </div>
-    );
+    return <TaskDetails url={TASK_DETAILS_URL} taskID={id} />;
+    // return (
+    //     <div>
+    //         {/* <LinkPreviewCard /> */}
+    //         <TaskDetails url={TASK_DETAILS_URL} taskID={id} />
+    //     </div>
+    // );
 };
 export default TaskDetailsPage;
