@@ -5,7 +5,7 @@ import Head from 'next/head';
 //     return await response.json();
 // }
 
-const LinkPreviewCard = () => {
+const LinkPreviewCard = (details: any) => {
     // const data = fetchData();
     // const taskTitle = data.title;
 
@@ -29,7 +29,7 @@ const LinkPreviewCard = () => {
                 <meta property="og:title" content={taskTitle} />
                 <meta
                     property="og:description"
-                    content={`${taskDescription},\n startedOn: ${taskStartDate} - endsOn: ${taskEndDate}, assignee: ${assignee} - reporter: ${reporter}`}
+                    content={`${taskDescription},\n\n assignee: ${assignee} - reporter: ${reporter},\n\n startedOn: ${taskStartDate} - endsOn: ${taskEndDate}`}
                 />
                 <meta property="og:image" content={taskImage} />
                 <meta property="og:url" content={taskURL} />
