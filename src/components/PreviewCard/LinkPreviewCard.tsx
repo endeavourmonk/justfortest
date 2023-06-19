@@ -36,7 +36,10 @@ const LinkPreviewCard = () => {
     const taskTitle = 'Task Title';
     const taskStartDate = 'June 20, 2023';
     const taskEndDate = 'June 25, 2023';
-    const taskDescription = `Task duration: ${taskStartDate} - ${taskEndDate}`;
+    const taskDescription =
+        'Implementing the link preview of the task with details: like assignee, reporter, start and end date of the task with little description';
+    const assignee = 'some random user';
+    const reporter = 'Ankush';
 
     const taskImage = 'https://realdevsquad.com/img/Real-Dev-Squad@1x.png';
     const taskURL = 'https://justfortest.vercel.app/';
@@ -46,7 +49,10 @@ const LinkPreviewCard = () => {
             <Head>
                 <title>status site</title>
                 <meta property="og:title" content={taskTitle} />
-                <meta property="og:description" content={taskDescription} />
+                <meta
+                    property="og:description"
+                    content={`${taskDescription}, startedOn: ${taskStartDate} - endsOn: ${taskEndDate}, assignee: ${assignee} - reporter: ${reporter}`}
+                />
                 <meta property="og:image" content={taskImage} />
                 <meta property="og:url" content={taskURL} />
                 <meta property="og:type" content="website" />
