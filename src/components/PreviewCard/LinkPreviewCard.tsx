@@ -1,26 +1,16 @@
 import Head from 'next/head';
 
-// async function fetchData() {
-//     const response = await fetch('https://api.realdevsquad.com/tasks');
-//     return await response.json();
-// }
-
-const LinkPreviewCard = (details: any) => {
-    // const data = fetchData();
-    // const taskTitle = data.title;
-
-    // fetchData.then((data) => {taskTitle = data.title;});
-
-    const taskTitle = 'title of the task';
-    const taskStartDate = 'June 20, 2023';
-    const taskEndDate = 'June 25, 2023';
-    const taskDescription =
-        'Implementing the link preview of the task with details: like assignee, reporter, start and end date of the task with little description';
-    const assignee = 'some random user';
-    const reporter = 'Ankush';
-
-    const taskImage = 'https://realdevsquad.com/img/Real-Dev-Squad@1x.png';
-    const taskURL = 'https://justfortest.vercel.app/';
+const LinkPreviewCard = ({ details }: { details: any }) => {
+    const {
+        taskTitle,
+        taskStartDate,
+        taskEndDate,
+        taskDescription,
+        assignee,
+        reporter,
+        taskImage,
+        taskURL,
+    } = details;
 
     return (
         <div>
