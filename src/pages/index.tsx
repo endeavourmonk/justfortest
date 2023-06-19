@@ -22,14 +22,19 @@ const Index = ({ details }: { details: any }) => {
 export const getServerSideProps = async () => {
     async function fetchData() {
         const response = await fetch('https://api.realdevsquad.com/tasks');
-        return await response.json();
+        const data = await response.json();
+        return data.task;
     }
-    let result;
-    fetchData().then((data: any) => {
-        result = data.task;
-    });
 
-    result = result[0];
+    let result: any;
+
+    fetchData()
+        .then((data: any[]) => {
+            result = data[0];
+        })
+        .catch((error) => {
+            console.error('Error fetching data:', error);
+        });
     // console.log('data: ', result);
     // const details = {
     //     taskTitle: 'title of the task',
