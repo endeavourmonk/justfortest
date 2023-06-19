@@ -19,7 +19,6 @@ const LinkPreviewCard = () => {
                     content="https://justfortest.vercel.app/"
                 />
                 <meta property="og:type" content="website" />
-                <p>Hello world!</p>
             </Head>
         </div>
     );
