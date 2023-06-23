@@ -23,6 +23,7 @@ import {
     useUpdateTaskDetailsMutation,
 } from '@/app/services/taskDetailsApi';
 import { taskDetailsDataType } from '@/interfaces/taskDetails.type';
+import LinkPreviewCard from '../PreviewCard/LinkPreviewCard';
 
 type ButtonProps = {
     buttonName: string;
@@ -77,6 +78,7 @@ const TaskDetails: FC<Props> = ({ taskID }) => {
     const { SUCCESS, ERROR } = ToastTypes;
 
     const taskDetailsData = data?.taskData;
+    console.log('task: ', taskDetailsData);
     const [taskDetails, setTaskDetails] = useState<
         Record<string, any> | undefined
     >({});
@@ -166,6 +168,7 @@ const TaskDetails: FC<Props> = ({ taskID }) => {
     const shouldRenderParentContainer = () => !isLoading && !isError && data;
     return (
         <>
+            <LinkPreviewCard details={taskDetailsData} />
             <NavBar />
             {renderLoadingComponent()}
             {shouldRenderParentContainer() && (

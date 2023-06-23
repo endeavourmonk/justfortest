@@ -1,28 +1,17 @@
 import Head from 'next/head';
 
 const LinkPreviewCard = ({ details }: { details: any }) => {
-    const {
-        taskTitle,
-        taskStartDate,
-        taskEndDate,
-        taskDescription,
-        assignee,
-        reporter,
-        taskImage,
-        taskURL,
-    } = details;
-
     return (
         <div>
             <Head>
                 <title>status site</title>
-                <meta property="og:title" content={taskTitle} />
+                <meta property="og:title" content={details.title} />
                 <meta
                     property="og:description"
-                    content={`${taskDescription},\n\n assignee: ${assignee} - reporter: ${reporter},\n\n startedOn: ${taskStartDate} - endsOn: ${taskEndDate}`}
+                    content={`${details.purpose},\n\n assignee: ${details.assignee} - reporter: ${details.createdBy},\n\n `}
                 />
-                <meta property="og:image" content={taskImage} />
-                <meta property="og:url" content={taskURL} />
+                {/* <meta property="og:image" content={taskImage} />
+                <meta property="og:url" content={taskURL} /> */}
                 <meta property="og:type" content="website" />
             </Head>
         </div>
