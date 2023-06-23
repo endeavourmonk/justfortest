@@ -12,7 +12,6 @@ import { TasksContent } from '@/components/tasks/TasksContent';
 const Index = () => {
     return (
         <Layout>
-            {/* <LinkPreviewCard details={details} /> */}
             <Head title="Tasks" />
 
             <div className={classNames.container}>
