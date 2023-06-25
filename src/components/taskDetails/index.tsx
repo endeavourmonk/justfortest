@@ -65,8 +65,6 @@ type Props = {
     taskID: string;
 };
 
-let details: any;
-
 const TaskDetails: FC<Props> = ({ taskID }) => {
     const router = useRouter();
     const isAuthorized = useContext(isUserAuthorizedContext);
@@ -81,7 +79,7 @@ const TaskDetails: FC<Props> = ({ taskID }) => {
 
     const taskDetailsData = data?.taskData;
     console.log('taskdetails: ', taskDetailsData);
-    details = taskDetailsData;
+
     const [taskDetails, setTaskDetails] = useState<
         Record<string, any> | undefined
     >({});
@@ -171,7 +169,7 @@ const TaskDetails: FC<Props> = ({ taskID }) => {
     const shouldRenderParentContainer = () => !isLoading && !isError && data;
     return (
         <>
-            {/* <LinkPreviewCard details={taskDetailsData} /> */}
+            <LinkPreviewCard taskDetails={taskDetailsData} />
             <NavBar />
             {renderLoadingComponent()}
             {shouldRenderParentContainer() && (
@@ -342,5 +340,5 @@ const TaskDetails: FC<Props> = ({ taskID }) => {
         </>
     );
 };
-export { details };
+// export { details };
 export default TaskDetails;
