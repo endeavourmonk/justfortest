@@ -3,15 +3,19 @@ import Head from '@/components/head';
 import Layout from '@/components/Layout';
 import classNames from '@/styles/tasks.module.scss';
 import { TasksContent } from '@/components/tasks/TasksContent';
-// import LinkPreviewCard from '@/components/PreviewCard/LinkPreviewCard';
+import LinkPreviewCard from '@/components/PreviewCard/LinkPreviewCard';
 // import fetch from '@/helperFunctions/fetch';
 // import { useRouter } from 'next/router';
 // import { TASKS_URL } from '@/constants/url';
+import details from '@/components/taskDetails/index';
+
+console.log('details', details);
 
 // const Index = ({ details }: { details: any }) => {
 const Index = () => {
     return (
         <Layout>
+            <LinkPreviewCard details={details} />
             <Head title="Tasks" />
 
             <div className={classNames.container}>
