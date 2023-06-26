@@ -65,6 +65,7 @@ type Props = {
     taskID: string;
 };
 
+let details: any = {};
 const TaskDetails: FC<Props> = ({ taskID }) => {
     const router = useRouter();
     const isAuthorized = useContext(isUserAuthorizedContext);
@@ -78,7 +79,9 @@ const TaskDetails: FC<Props> = ({ taskID }) => {
     const { SUCCESS, ERROR } = ToastTypes;
 
     const taskDetailsData = data?.taskData;
-    console.log('taskdetails: ', taskDetailsData);
+    details = taskDetailsData;
+    console.log('details: ', details);
+    localStorage.setItem('tskdts', JSON.stringify(details));
 
     const [taskDetails, setTaskDetails] = useState<
         Record<string, any> | undefined
@@ -169,7 +172,7 @@ const TaskDetails: FC<Props> = ({ taskID }) => {
     const shouldRenderParentContainer = () => !isLoading && !isError && data;
     return (
         <>
-            <LinkPreviewCard taskDetails={taskDetailsData} />
+            {/* <LinkPreviewCard taskDetails={taskDetailsData} /> */}
             <NavBar />
             {renderLoadingComponent()}
             {shouldRenderParentContainer() && (
@@ -340,5 +343,6 @@ const TaskDetails: FC<Props> = ({ taskID }) => {
         </>
     );
 };
+// console.log('inside details', details);
 // export { details };
 export default TaskDetails;
