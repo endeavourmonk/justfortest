@@ -80,8 +80,6 @@ const TaskDetails: FC<Props> = ({ taskID }) => {
 
     const taskDetailsData = data?.taskData;
     details = taskDetailsData;
-    console.log('details: ', details);
-    localStorage.setItem('tskdts', JSON.stringify(details));
 
     const [taskDetails, setTaskDetails] = useState<
         Record<string, any> | undefined

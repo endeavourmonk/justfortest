@@ -13,17 +13,9 @@ import LinkPreviewCard from '@/components/PreviewCard/LinkPreviewCard';
 
 // const Index = ({ details }: { details: any }) => {
 const Index = () => {
-    let receivedData: any;
-    const receivedDataString = localStorage.getItem('tskdts');
-    if (receivedDataString) {
-        receivedData = JSON.parse(receivedDataString);
-        console.log('received data', receivedData); // { name: 'John', age: 25 }
-    } else {
-        console.log('Data not found');
-    }
     return (
         <Layout>
-            <LinkPreviewCard taskDetails={receivedData} />
+            {/* <LinkPreviewCard taskDetails={receivedData} /> */}
             <Head title="Tasks" />
 
             <div className={classNames.container}>
