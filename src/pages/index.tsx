@@ -3,7 +3,7 @@ import Head from '@/components/head';
 import Layout from '@/components/Layout';
 import classNames from '@/styles/tasks.module.scss';
 import { TasksContent } from '@/components/tasks/TasksContent';
-// import LinkPreviewCard from '@/components/PreviewCard/LinkPreviewCard';
+import LinkPreviewCard from '@/components/PreviewCard/LinkPreviewCard';
 // import fetch from '@/helperFunctions/fetch';
 // import { useRouter } from 'next/router';
 // import { TASKS_URL } from '@/constants/url';
@@ -13,9 +13,17 @@ import { TasksContent } from '@/components/tasks/TasksContent';
 
 // const Index = ({ details }: { details: any }) => {
 const Index = () => {
+    let receivedData: any;
+    const receivedDataString = localStorage.getItem('tskdts');
+    if (receivedDataString) {
+        receivedData = JSON.parse(receivedDataString);
+        console.log('received data', receivedData); // { name: 'John', age: 25 }
+    } else {
+        console.log('Data not found');
+    }
     return (
         <Layout>
-            {/* <LinkPreviewCard details={details} /> */}
+            <LinkPreviewCard taskDetails={receivedData} />
             <Head title="Tasks" />
 
             <div className={classNames.container}>
