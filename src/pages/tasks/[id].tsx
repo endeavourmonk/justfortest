@@ -12,19 +12,19 @@ const TaskDetailsPage = () => {
     if (!id) {
         return <PageNotFound />;
     }
-    let receivedData: any;
-    const receivedDataString = localStorage.getItem('tskdts');
-    if (receivedDataString) {
-        receivedData = JSON.parse(receivedDataString);
-        console.log('received data', receivedData); // { name: 'John', age: 25 }
-    } else {
-        console.log('Data not found');
-    }
+    // let receivedData: any;
+    // const receivedDataString = localStorage.getItem('tskdts');
+    // if (receivedDataString) {
+    //     receivedData = JSON.parse(receivedDataString);
+    //     console.log('received data', receivedData); // { name: 'John', age: 25 }
+    // } else {
+    //     console.log('Data not found');
+    // }
     // console.log('passed details', details);
 
     return (
         <>
-            <LinkPreviewCard taskDetails={receivedData} />
+            {/* <LinkPreviewCard taskDetails={receivedData} /> */}
             <TaskDetails url={TASK_DETAILS_URL} taskID={id} />;
         </>
     );
