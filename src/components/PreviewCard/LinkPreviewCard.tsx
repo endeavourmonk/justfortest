@@ -1,8 +1,13 @@
 import Head from 'next/head';
-import { taskDetailsDataType } from '@/interfaces/taskDetails.type';
 
-const LinkPreviewCard = ({ taskDetails }: { taskDetails: any }) => {
-    // const { title, assignee, createdBy } = taskDetails;
+interface LinkPreviewCardProps {
+    taskDetails: any;
+    taskURL: any;
+}
+
+const LinkPreviewCard = ({ taskDetails, taskURL }: LinkPreviewCardProps) => {
+    console.log('title', taskDetails);
+    console.log('taskurl = ', taskURL);
     return (
         <div>
             <Head>
@@ -12,8 +17,11 @@ const LinkPreviewCard = ({ taskDetails }: { taskDetails: any }) => {
                     property="og:description"
                     content={`{purpose},\n\n assignee: ${taskDetails?.assignee} - reporter: ${taskDetails?.createdBy},\n\n `}
                 />
-                {/* <meta property="og:image" content={taskImage} />
-                <meta property="og:url" content={taskURL} /> */}
+                <meta
+                    property="og:image"
+                    content="https://realdevsquad.com/img/Real-Dev-Squad@1x.png"
+                />
+                <meta property="og:url" content={taskURL} />
                 <meta property="og:type" content="website" />
             </Head>
         </div>
