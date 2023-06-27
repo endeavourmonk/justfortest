@@ -6,7 +6,7 @@ interface LinkPreviewCardProps {
 }
 
 const LinkPreviewCard = ({ taskDetails, taskURL }: LinkPreviewCardProps) => {
-    console.log('title', taskDetails);
+    console.log('taskDetails', taskDetails);
     console.log('taskurl = ', taskURL);
     return (
         <div>
