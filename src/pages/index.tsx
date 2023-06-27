@@ -4,10 +4,15 @@ import Layout from '@/components/Layout';
 import classNames from '@/styles/tasks.module.scss';
 import { TasksContent } from '@/components/tasks/TasksContent';
 import LinkPreviewCard from '@/components/PreviewCard/LinkPreviewCard';
+import { fetchTaskDetails } from './tasks/[id]';
 
+const taskDetails = fetchTaskDetails();
+console.log('title', taskDetails);
+const taskURL = 'adfad';
 const Index = () => {
     return (
         <Layout>
+            <LinkPreviewCard taskDetails={taskDetails} taskURL={taskURL} />
             <Head title="Tasks" />
             <div className={classNames.container}>
                 <TasksContent />
