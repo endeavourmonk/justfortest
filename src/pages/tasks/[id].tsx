@@ -15,8 +15,13 @@ const TaskDetailsPage = () => {
     }
 
     const { data } = useGetTaskDetailsQuery(id);
-    const taskDetails: any = data?.taskData;
+    // const taskDetails: any = data?.taskData;
     const taskURL: any = `https://status.realdevsquad.com/tasks/${id}`;
+    const taskDetails = {
+        title: 'some random task',
+        assignee: 'user-any',
+        createdBy: 'sudo user',
+    };
 
     return (
         <>

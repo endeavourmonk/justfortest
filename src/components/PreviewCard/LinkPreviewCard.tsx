@@ -6,8 +6,6 @@ interface LinkPreviewCardProps {
 }
 
 const LinkPreviewCard = ({ taskDetails, taskURL }: LinkPreviewCardProps) => {
-    console.log('taskDetails', taskDetails);
-    console.log('taskurl = ', taskURL);
     return (
         <div>
             <Head>
@@ -15,7 +13,7 @@ const LinkPreviewCard = ({ taskDetails, taskURL }: LinkPreviewCardProps) => {
                 <meta property="og:title" content={taskDetails?.title} />
                 <meta
                     property="og:description"
-                    content={`{purpose},\n\n assignee: ${taskDetails?.assignee} - reporter: ${taskDetails?.createdBy},\n\n `}
+                    content={`assignee: ${taskDetails?.assignee} - reporter: ${taskDetails?.createdBy},\n\n `}
                 />
                 <meta
                     property="og:image"
